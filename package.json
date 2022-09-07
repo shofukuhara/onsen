@@ -4,14 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "sass":"sass './src/scss/pages/top.scss':'./src/css/top.css'",
-    "pug":"pug './index.pug'",
-    "format":"prettier --write './index.html'"
+    "sass": "sass './src/scss/pages/top.scss':'./src/css/top.css'",
+    "pug": "pug './index.pug'",
+    "format": "prettier --write './index.html'",
+    "watch:pug":"pug --watch 'index.pug'",
+    "watch:sass":"sass --watch 'src/scss/pages/top.scss' src/css/top.css"
   },
   "dependencies": {
     "prettier": "^2.7.1",
     "pug": "^3.0.2",
     "pug-cli": "^1.0.0-alpha6",
-    "sass": "^1.54.8"
+    "sass": "^1.54.8",
+    "watch": "^1.0.2"
   }
 }
