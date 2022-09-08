@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add prettir
+  /usr/local/bin/node /usr/local/bin/yarn add browser-sync
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
@@ -14,17 +14,12 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/prettir: Not found
-      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66988:18)
-      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140662:22)
-      at Request.emit (node:events:527:28)
-      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141634:10)
-      at Request.emit (node:events:527:28)
-      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141556:12)
-      at Object.onceWrapper (node:events:641:28)
-      at IncomingMessage.emit (node:events:539:35)
-      at endReadableNT (node:internal/streams/readable:1345:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  SyntaxError: /Users/fukuharashou/Desktop/ポートフォリオ/onsen/package.json: Unexpected token } in JSON at position 418
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -33,13 +28,19 @@ npm manifest:
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-      "sass":"sass './src/scss/pages/top.scss':'./src/css/top.css'",
-      "pug":"pug './index.pug'"
+      "sass": "sass './src/scss/pages/top.scss':'./src/css/top.css'",
+      "pug": "pug './index.pug'",
+      "format": "prettier --write './index.html'",
+      "watch:pug":"pug --watch 'index.pug'",
+      "watch:sass":"sass --watch 'src/scss/pages/top.scss' src/css/top.css",
+      "watch": "yarn watch:pug & yarn watch:sass",
     },
     "dependencies": {
+      "prettier": "^2.7.1",
       "pug": "^3.0.2",
       "pug-cli": "^1.0.0-alpha6",
-      "sass": "^1.54.8"
+      "sass": "^1.54.8",
+      "watch": "^1.0.2"
     }
   }
 
@@ -306,6 +307,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
     integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
   
+  exec-sh@^0.2.0:
+    version "0.2.2"
+    resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.2.2.tgz#2a5e7ffcbd7d0ba2755bdecb16e5a427dfbdec36"
+    integrity sha512-FIUCJz1RbuS0FKTdaAafAByGS0CPvU3R0MeHxgtl+djzCc//F8HakL8GzmVNZanasTbTAY/3DRFA0KpVqj/eAw==
+    dependencies:
+      merge "^1.2.0"
+  
   fill-range@^7.0.1:
     version "7.0.1"
     resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
@@ -470,7 +478,12 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
     integrity sha512-k+yt5n3l48JU4k8ftnKG6V7u32wyH2NfKzeMto9F/QRE0amxy/LayxwlvjjkZEIzqR+19IrtFO8p5kB9QaYUFg==
   
-  minimist@^1.2.6:
+  merge@^1.2.0:
+    version "1.2.1"
+    resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.1.tgz#38bebf80c3220a8a487b6fcfb3941bb11720c145"
+    integrity sha512-VjFo4P5Whtj4vsLzsYBu5ayHhoHJ0UqNm7ibvShmbmoz7tGi0vXaoJbGdB+GmDMLUdg8DpQXEIeVDAe8MaABvQ==
+  
+  minimist@^1.2.0, minimist@^1.2.6:
     version "1.2.6"
     resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
     integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
@@ -501,6 +514,11 @@ Lockfile:
     version "2.3.1"
     resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
     integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
+  
+  prettier@^2.7.1:
+    version "2.7.1"
+    resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
+    integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
   
   promise@^7.0.1:
     version "7.3.1"
@@ -852,6 +870,14 @@ Lockfile:
     version "3.1.0"
     resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-3.1.0.tgz#614f7fbf8d801f0bb5f0661f5b2f5785750e4f09"
     integrity sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==
+  
+  watch@^1.0.2:
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/watch/-/watch-1.0.2.tgz#340a717bde765726fa0aa07d721e0147a551df0c"
+    integrity sha512-1u+Z5n9Jc1E2c7qDO8SinPoZuHj7FgbgU1olSFoyaklduDvvtX7GMMtlE6OC9FTXq4KvNAOfj6Zu4vI1e9bAKA==
+    dependencies:
+      exec-sh "^0.2.0"
+      minimist "^1.2.0"
   
   window-size@0.1.0:
     version "0.1.0"

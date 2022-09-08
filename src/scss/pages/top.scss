@@ -1,0 +1,35 @@
+@use "../base/reset";
+@use "../base/mixin" as m;
+@use "../base/variable" as v;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include m.mq('sp') {
+    
+  }
+  @include m.mq('tab') {
+    
+  }
+  @include m.mq('pc') {
+    
+  }
+}
+
+.bg {
+  @include m.mq('sp') {
+    
+  }
+  @include m.mq('tab') {
+    
+  }
+  @include m.mq('pc') {
+    background-image: url("/src/img/top_main.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    height: 100vh;
+  }
+}
