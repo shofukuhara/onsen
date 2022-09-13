@@ -118,11 +118,18 @@ html {
 
 @media screen and (min-width: 1025px) {
   .concept {
-    background-color: #F4F4F4;
-    padding-bottom: 240px;
-    margin-bottom: 160px;
     position: relative;
-    top: 30px;
+    padding-bottom: 240px;
+  }
+  .concept::after {
+    position: absolute;
+    content: "";
+    background-color: #F4F4F4;
+    height: 100%;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
   }
   .concept__flex {
     display: flex;
@@ -136,7 +143,7 @@ html {
     width: 100%;
   }
   .concept__box {
-    width: 48%;
+    width: 40%;
   }
   .concept__sectitle {
     margin-bottom: 40px;
@@ -163,6 +170,180 @@ html {
   .concept__link {
     padding-top: 32px;
     display: block;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .inn {
+    padding-bottom: 240px;
+  }
+  .inn__flex {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: flex-end;
+  }
+  .inn__img {
+    width: 50%;
+  }
+  .inn__img img {
+    width: 100%;
+  }
+  .inn__box {
+    width: 40%;
+  }
+  .inn__sectitle {
+    margin-bottom: 40px;
+  }
+  .inn__sectitle-sml {
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .inn__sectitle-sml::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #C7C7C7;
+    position: absolute;
+    top: 50%;
+    right: -140px;
+  }
+  .inn__sectitle-lar {
+    display: block;
+    font-size: 3.2rem;
+  }
+  .inn__link {
+    padding-top: 32px;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .spring {
+    position: relative;
+    padding-bottom: 240px;
+  }
+  .spring::after {
+    position: absolute;
+    content: "";
+    background-color: #F4F4F4;
+    height: 100%;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  .spring__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .spring__img {
+    width: 50%;
+  }
+  .spring__img img {
+    width: 100%;
+  }
+  .spring__box {
+    width: 40%;
+  }
+  .spring__sectitle {
+    margin-bottom: 40px;
+  }
+  .spring__sectitle-sml {
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .spring__sectitle-sml::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #C7C7C7;
+    position: absolute;
+    top: 50%;
+    right: -140px;
+  }
+  .spring__sectitle-lar {
+    display: block;
+    font-size: 3.2rem;
+  }
+  .spring__link {
+    padding-top: 32px;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .meal {
+    padding-bottom: 240px;
+  }
+  .meal__flex {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: flex-end;
+  }
+  .meal__img {
+    width: 50%;
+  }
+  .meal__img img {
+    width: 100%;
+  }
+  .meal__box {
+    width: 40%;
+  }
+  .meal__sectitle {
+    margin-bottom: 40px;
+  }
+  .meal__sectitle-sml {
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .meal__sectitle-sml::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #C7C7C7;
+    position: absolute;
+    top: 50%;
+    right: -140px;
+  }
+  .meal__sectitle-lar {
+    display: block;
+    font-size: 3.2rem;
+  }
+  .meal__link {
+    padding-top: 32px;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .contact {
+    padding-bottom: 180px;
+  }
+  .contact__sectitle {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+  .contact__text {
+    text-align: center;
+    display: block;
+    margin-bottom: 40px;
+  }
+  .contact__link {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #333;
+    width: 260px;
+    padding: 16px 0;
+    color: #333;
   }
 }
 

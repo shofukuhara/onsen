@@ -93,11 +93,18 @@ body {
     
   }
   @include m.mq('pc') {
-    background-color: #F4F4F4;
-    padding-bottom: 240px;
-    margin-bottom: 160px;
     position: relative;
-    top: 30px;
+    padding-bottom: 240px;
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: #F4F4F4;
+      height: 100%;
+      top:100px;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+    }
     &__flex {
       display: flex;
       justify-content: space-between;
@@ -110,7 +117,7 @@ body {
       }
     }
     &__box {
-      width: 48%;
+      width: 40%;
     }
     &__sectitle {
       margin-bottom: 40px;
@@ -137,6 +144,204 @@ body {
     &__link {
       padding-top: 32px;
       display: block;
+    }
+  }
+}
+
+.inn {
+  @include m.mq('sp') {
+    
+  }
+  @include m.mq('tab') {
+    
+  }
+  @include m.mq('pc') {
+    padding-bottom: 240px;
+    &__flex {
+      display: flex;
+      flex-flow: row-reverse;
+      align-items: flex-end;
+    }
+    &__img {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    &__box {
+      width: 40%;
+    }
+    &__sectitle {
+      margin-bottom: 40px;
+      &-sml {
+        display: inline-block;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100px;
+          height: 1px;
+          background-color: #C7C7C7;
+          position: absolute;
+          top: 50%;
+          right: -140px;
+        }
+      }
+      &-lar {
+        display: block;
+        font-size: 3.2rem;
+      }
+    }
+    &__link {
+      padding-top: 32px;
+      display: block;
+    }
+  }
+}
+
+.spring {
+  @include m.mq('sp') {
+    
+  }
+  @include m.mq('tab') {
+    
+  }
+  @include m.mq('pc') {
+    position: relative;
+    padding-bottom: 240px;
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: #F4F4F4;
+      height: 100%;
+      top:100px;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+    }
+    &__flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    &__img {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    &__box {
+      width: 40%;
+    }
+    &__sectitle {
+      margin-bottom: 40px;
+      &-sml {
+        display: inline-block;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100px;
+          height: 1px;
+          background-color: #C7C7C7;
+          position: absolute;
+          top: 50%;
+          right: -140px;
+        }
+      }
+      &-lar {
+        display: block;
+        font-size: 3.2rem;
+      }
+    }
+    &__link {
+      padding-top: 32px;
+      display: block;
+    }
+  }
+}
+
+.meal {
+  @include m.mq('sp') {
+    
+  }
+  @include m.mq('tab') {
+    
+  }
+  @include m.mq('pc') {
+    padding-bottom: 240px;
+    &__flex {
+      display: flex;
+      flex-flow: row-reverse;
+      align-items: flex-end;
+    }
+    &__img {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    &__box {
+      width: 40%;
+    }
+    &__sectitle {
+      margin-bottom: 40px;
+      &-sml {
+        display: inline-block;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100px;
+          height: 1px;
+          background-color: #C7C7C7;
+          position: absolute;
+          top: 50%;
+          right: -140px;
+        }
+      }
+      &-lar {
+        display: block;
+        font-size: 3.2rem;
+      }
+    }
+    &__link {
+      padding-top: 32px;
+      display: block;
+    }
+  }
+}
+
+.contact {
+  @include m.mq('sp') {
+    
+  }
+  @include m.mq('tab') {
+    
+  }
+  @include m.mq('pc') {
+    padding-bottom: 180px;
+    &__sectitle {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+    &__text {
+      text-align: center;
+      display: block;
+      margin-bottom: 40px;
+    }
+    &__link {
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+      border: 1px solid #333;
+      width: 260px;
+      padding: 16px 0;
+      color: #333;
     }
   }
 }
