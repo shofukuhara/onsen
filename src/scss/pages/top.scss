@@ -27,6 +27,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 7;
   }
   &__logo {
     font-size: 4rem;
@@ -39,7 +40,7 @@ body {
     justify-content: space-between;
     padding-right: 40px;
   }
-  &__text {
+  &__tel {
     color: #fff;
     font-size: 2rem;
     padding-right: 40px;
@@ -49,6 +50,15 @@ body {
     border: 1px solid #fff;
     padding: 10px 50px;
   }
+}
+
+.scroll {
+  color: #333;
+}
+
+.link {
+  color: #333;
+  border: 1px solid #333;
 }
 
 .bg {
@@ -327,7 +337,18 @@ body {
     &__sectitle {
       text-align: center;
       font-size: 3rem;
-      margin-bottom: 40px;
+      margin-bottom: 80px;
+      position: relative;
+      &::after {
+        content: "";
+        width: 100px;
+        height: 1px;
+        background-color: #333;
+        position: absolute;
+        top: 180%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
     &__text {
       text-align: center;
@@ -342,6 +363,14 @@ body {
       width: 260px;
       padding: 16px 0;
       color: #333;
+      margin-bottom: 32px;
+    }
+    &__tel {
+      text-align: center;
+      display: block;
+      font-size: 3rem;
+      color: #333;
     }
   }
 }
+

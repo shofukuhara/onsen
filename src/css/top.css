@@ -64,6 +64,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 7;
 }
 .h__logo {
   font-size: 4rem;
@@ -76,7 +77,7 @@ html {
   justify-content: space-between;
   padding-right: 40px;
 }
-.h__text {
+.h__tel {
   color: #fff;
   font-size: 2rem;
   padding-right: 40px;
@@ -85,6 +86,15 @@ html {
   color: #fff;
   border: 1px solid #fff;
   padding: 10px 50px;
+}
+
+.scroll {
+  color: #333;
+}
+
+.link {
+  color: #333;
+  border: 1px solid #333;
 }
 
 @media screen and (min-width: 1025px) {
@@ -329,7 +339,18 @@ html {
   .contact__sectitle {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+    position: relative;
+  }
+  .contact__sectitle::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #333;
+    position: absolute;
+    top: 180%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .contact__text {
     text-align: center;
@@ -343,6 +364,13 @@ html {
     border: 1px solid #333;
     width: 260px;
     padding: 16px 0;
+    color: #333;
+    margin-bottom: 32px;
+  }
+  .contact__tel {
+    text-align: center;
+    display: block;
+    font-size: 3rem;
     color: #333;
   }
 }
