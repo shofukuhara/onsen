@@ -180,6 +180,26 @@ html {
   .concept__link {
     padding-top: 32px;
     display: block;
+    position: relative;
+    color: #333;
+  }
+  .concept__link::before {
+    content: "";
+    position: absolute;
+    left: 60px;
+    bottom: 0;
+    width: 60px;
+    height: 1px;
+    background-color: #C7C7C7;
+  }
+  .concept__link::after {
+    content: "";
+    position: absolute;
+    left: 114px;
+    bottom: -2px;
+    height: 15px;
+    border-right: 1px solid #C7C7C7;
+    transform: rotate(-45deg);
   }
 }
 
@@ -226,6 +246,26 @@ html {
   .inn__link {
     padding-top: 32px;
     display: block;
+    color: #333;
+    position: relative;
+  }
+  .inn__link::before {
+    content: "";
+    position: absolute;
+    left: 60px;
+    bottom: 0;
+    width: 60px;
+    height: 1px;
+    background-color: #C7C7C7;
+  }
+  .inn__link::after {
+    content: "";
+    position: absolute;
+    left: 114px;
+    bottom: -2px;
+    height: 15px;
+    border-right: 1px solid #C7C7C7;
+    transform: rotate(-45deg);
   }
 }
 
@@ -283,6 +323,26 @@ html {
   .spring__link {
     padding-top: 32px;
     display: block;
+    color: #333;
+    position: relative;
+  }
+  .spring__link::before {
+    content: "";
+    position: absolute;
+    left: 60px;
+    bottom: 0;
+    width: 60px;
+    height: 1px;
+    background-color: #C7C7C7;
+  }
+  .spring__link::after {
+    content: "";
+    position: absolute;
+    left: 114px;
+    bottom: -2px;
+    height: 15px;
+    border-right: 1px solid #C7C7C7;
+    transform: rotate(-45deg);
   }
 }
 
@@ -329,6 +389,26 @@ html {
   .meal__link {
     padding-top: 32px;
     display: block;
+    color: #333;
+    position: relative;
+  }
+  .meal__link::before {
+    content: "";
+    position: absolute;
+    left: 60px;
+    bottom: 0;
+    width: 60px;
+    height: 1px;
+    background-color: #C7C7C7;
+  }
+  .meal__link::after {
+    content: "";
+    position: absolute;
+    left: 114px;
+    bottom: -2px;
+    height: 15px;
+    border-right: 1px solid #C7C7C7;
+    transform: rotate(-45deg);
   }
 }
 

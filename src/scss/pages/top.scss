@@ -154,6 +154,26 @@ body {
     &__link {
       padding-top: 32px;
       display: block;
+      position: relative;
+      color: #333;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 60px;
+        bottom: 0;
+        width: 60px;
+        height: 1px;
+        background-color: #C7C7C7;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 114px;
+        bottom: -2px;
+        height: 15px;
+        border-right: 1px solid #C7C7C7;
+        transform: rotate(-45deg);
+      }
     }
   }
 }
@@ -206,6 +226,26 @@ body {
     &__link {
       padding-top: 32px;
       display: block;
+      color: #333;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 60px;
+        bottom: 0;
+        width: 60px;
+        height: 1px;
+        background-color: #C7C7C7;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 114px;
+        bottom: -2px;
+        height: 15px;
+        border-right: 1px solid #C7C7C7;
+        transform: rotate(-45deg);
+      }
     }
   }
 }
@@ -269,6 +309,26 @@ body {
     &__link {
       padding-top: 32px;
       display: block;
+      color: #333;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 60px;
+        bottom: 0;
+        width: 60px;
+        height: 1px;
+        background-color: #C7C7C7;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 114px;
+        bottom: -2px;
+        height: 15px;
+        border-right: 1px solid #C7C7C7;
+        transform: rotate(-45deg);
+      }
     }
   }
 }
@@ -321,6 +381,26 @@ body {
     &__link {
       padding-top: 32px;
       display: block;
+      color: #333;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 60px;
+        bottom: 0;
+        width: 60px;
+        height: 1px;
+        background-color: #C7C7C7;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 114px;
+        bottom: -2px;
+        height: 15px;
+        border-right: 1px solid #C7C7C7;
+        transform: rotate(-45deg);
+      }
     }
   }
 }
