@@ -70,6 +70,7 @@ html {
   font-size: 4rem;
   color: #fff;
   padding-left: 40px;
+  z-index: 8;
 }
 .h__reserve {
   display: flex;
@@ -128,6 +129,7 @@ html {
 
 @media screen and (min-width: 1025px) {
   .concept {
+    z-index: -1;
     position: relative;
     padding-bottom: 240px;
   }
@@ -271,6 +273,7 @@ html {
 
 @media screen and (min-width: 1025px) {
   .spring {
+    z-index: -1;
     position: relative;
     padding-bottom: 240px;
   }
@@ -452,6 +455,50 @@ html {
     display: block;
     font-size: 3rem;
     color: #333;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .f__inner {
+    background-color: #3B3B3B;
+    margin: 20px;
+    padding: 40px 0;
+  }
+  .f__layout {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .f__layout-menu {
+    display: flex;
+    align-items: center;
+  }
+  .f__layout-item {
+    margin: 0 16px;
+  }
+  .f__layout-link {
+    color: #fff;
+  }
+  .f__logo-link {
+    color: #fff;
+    font-size: 3.2rem;
+  }
+  .f__address-tel {
+    color: #fff;
+    display: block;
+    margin-bottom: 16px;
+    font-size: 3rem;
+  }
+  .f__address-time {
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .f__address-text {
+    color: #fff;
+    display: block;
   }
 }
 
