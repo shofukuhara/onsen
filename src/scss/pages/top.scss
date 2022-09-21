@@ -21,13 +21,13 @@ body {
 
 .h {
   position: fixed;
+  z-index: 7;
   width: 100%;
   &__flex {
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 7;
   }
   &__logo {
     font-size: 4rem;
@@ -50,16 +50,28 @@ body {
     color: #fff;
     border: 1px solid #fff;
     padding: 10px 50px;
+    transition: 0.5s ease;
+    &:hover {
+      color: #333;
+      background-color: #fff;
+      transition: 0.5s ease;
+    }
   }
 }
 
 .scroll {
   color: #333;
+  transition: 0.5s ease;
 }
 
 .link {
   color: #333;
   border: 1px solid #333;
+  &:hover {
+    color: #fff;
+    background-color: #333;
+    transition: 0.5s ease;
+  }
 }
 
 .bg {
@@ -104,7 +116,6 @@ body {
     
   }
   @include m.mq('pc') {
-    z-index: -1;
     position: relative;
     padding-bottom: 240px;
     &::after {
@@ -124,9 +135,27 @@ body {
     }
     &__img {
       width: 50%;
+      position: relative;
+      display: block;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #3b3b3bf8;
+        z-index: 2;
+        opacity: 1;
+      }
       img {
         width: 100%;
       }
+    }
+    &__fade:after{
+      opacity: 0;
+      transition: 2s ease;
+      position: absolute;
     }
     &__box {
       width: 40%;
@@ -180,6 +209,8 @@ body {
   }
 }
 
+
+
 .inn {
   @include m.mq('sp') {
     
@@ -196,9 +227,27 @@ body {
     }
     &__img {
       width: 50%;
+      position: relative;
+      display: block;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #3b3b3bf8;
+        z-index: 2;
+        opacity: 1;
+      }
       img {
         width: 100%;
       }
+    }
+    &__fade:after{
+      opacity: 0;
+      transition: 2s ease;
+      position: absolute;
     }
     &__box {
       width: 40%;
@@ -260,7 +309,6 @@ body {
     
   }
   @include m.mq('pc') {
-    z-index: -1;
     position: relative;
     padding-bottom: 240px;
     &::after {
@@ -280,9 +328,27 @@ body {
     }
     &__img {
       width: 50%;
+      position: relative;
+      display: block;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #3b3b3bf8;
+        z-index: 2;
+        opacity: 1;
+      }
       img {
         width: 100%;
       }
+    }
+    &__fade:after{
+      opacity: 0;
+      transition: 2s ease;
+      position: absolute;
     }
     &__box {
       width: 40%;
@@ -352,9 +418,27 @@ body {
     }
     &__img {
       width: 50%;
+      position: relative;
+      display: block;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #3b3b3bf8;
+        z-index: 2;
+        opacity: 1;
+      }
       img {
         width: 100%;
       }
+    }
+    &__fade:after{
+      opacity: 0;
+      transition: 2s ease;
+      position: absolute;
     }
     &__box {
       width: 40%;

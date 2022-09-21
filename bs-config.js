@@ -29,4 +29,3 @@ module.exports = {
   middleware: false,
   serveStatic: [],
 };
-

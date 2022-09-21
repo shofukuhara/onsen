@@ -57,6 +57,7 @@ html {
 
 .h {
   position: fixed;
+  z-index: 7;
   width: 100%;
 }
 .h__flex {
@@ -64,7 +65,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 7;
 }
 .h__logo {
   font-size: 4rem;
@@ -87,15 +87,27 @@ html {
   color: #fff;
   border: 1px solid #fff;
   padding: 10px 50px;
+  transition: 0.5s ease;
+}
+.h__link:hover {
+  color: #333;
+  background-color: #fff;
+  transition: 0.5s ease;
 }
 
 .scroll {
   color: #333;
+  transition: 0.5s ease;
 }
 
 .link {
   color: #333;
   border: 1px solid #333;
+}
+.link:hover {
+  color: #fff;
+  background-color: #333;
+  transition: 0.5s ease;
 }
 
 @media screen and (min-width: 1025px) {
@@ -129,7 +141,6 @@ html {
 
 @media screen and (min-width: 1025px) {
   .concept {
-    z-index: -1;
     position: relative;
     padding-bottom: 240px;
   }
@@ -150,9 +161,27 @@ html {
   }
   .concept__img {
     width: 50%;
+    position: relative;
+    display: block;
+  }
+  .concept__img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59, 59, 59, 0.9725490196);
+    z-index: 2;
+    opacity: 1;
   }
   .concept__img img {
     width: 100%;
+  }
+  .concept__fade:after {
+    opacity: 0;
+    transition: 2s ease;
+    position: absolute;
   }
   .concept__box {
     width: 40%;
@@ -216,9 +245,27 @@ html {
   }
   .inn__img {
     width: 50%;
+    position: relative;
+    display: block;
+  }
+  .inn__img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59, 59, 59, 0.9725490196);
+    z-index: 2;
+    opacity: 1;
   }
   .inn__img img {
     width: 100%;
+  }
+  .inn__fade:after {
+    opacity: 0;
+    transition: 2s ease;
+    position: absolute;
   }
   .inn__box {
     width: 40%;
@@ -273,7 +320,6 @@ html {
 
 @media screen and (min-width: 1025px) {
   .spring {
-    z-index: -1;
     position: relative;
     padding-bottom: 240px;
   }
@@ -294,9 +340,27 @@ html {
   }
   .spring__img {
     width: 50%;
+    position: relative;
+    display: block;
+  }
+  .spring__img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59, 59, 59, 0.9725490196);
+    z-index: 2;
+    opacity: 1;
   }
   .spring__img img {
     width: 100%;
+  }
+  .spring__fade:after {
+    opacity: 0;
+    transition: 2s ease;
+    position: absolute;
   }
   .spring__box {
     width: 40%;
@@ -360,9 +424,27 @@ html {
   }
   .meal__img {
     width: 50%;
+    position: relative;
+    display: block;
+  }
+  .meal__img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59, 59, 59, 0.9725490196);
+    z-index: 2;
+    opacity: 1;
   }
   .meal__img img {
     width: 100%;
+  }
+  .meal__fade:after {
+    opacity: 0;
+    transition: 2s ease;
+    position: absolute;
   }
   .meal__box {
     width: 40%;
