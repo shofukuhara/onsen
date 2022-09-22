@@ -20,18 +20,17 @@ const spring = document.querySelector(".spring__img");
 const meal = document.querySelector(".meal__img");
 let one = false;
 
-const fade = () => {
-  window.addEventListener("scroll", () => {
-    const position = document.querySelector(".concept__img").getBoundingClientRect().top;
-    if (position <= windowHeight && one !== true) {
-      once = true;
-      concept.classList.add("concept__fade");
-    }
-  });
+const fade = (target) => {
+  const position = target.getBoundingClientRect().top;
+  if (position <= windowHeight && one !== true) {
+    once = true;
+    target.classList.add("fade");
+  }
 };
 
-fade();
-// concept.classList.add("concept__fade");
-// inn.classList.add("inn__fade");
-// spring.classList.add("spring__fade");
-// meal.classList.add("meal__fade");
+window.addEventListener("scroll", () => {
+  fade(concept);
+  fade(inn);
+  fade(spring);
+  fade(meal);
+});

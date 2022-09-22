@@ -178,7 +178,7 @@ html {
   .concept__img img {
     width: 100%;
   }
-  .concept__fade:after {
+  .concept .fade::after {
     opacity: 0;
     transition: 2s ease;
     position: absolute;
@@ -262,7 +262,7 @@ html {
   .inn__img img {
     width: 100%;
   }
-  .inn__fade:after {
+  .inn .fade::after {
     opacity: 0;
     transition: 2s ease;
     position: absolute;
@@ -357,7 +357,7 @@ html {
   .spring__img img {
     width: 100%;
   }
-  .spring__fade:after {
+  .spring .fade::after {
     opacity: 0;
     transition: 2s ease;
     position: absolute;
@@ -441,7 +441,7 @@ html {
   .meal__img img {
     width: 100%;
   }
-  .meal__fade:after {
+  .meal .fade::after {
     opacity: 0;
     transition: 2s ease;
     position: absolute;
